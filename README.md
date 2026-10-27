@@ -1,5 +1,7 @@
 # Process Lasso Documentation
 
+**Read online: <https://vstory.github.io/ProcessLasso-Docs/>**
+
 An offline Markdown mirror of the official Process Lasso documentation at <https://bitsum.com/apps/process-lasso/docs/>, published as a static site via GitHub Pages.
 
 Process Lasso is Windows process automation and optimization software by [Bitsum](https://bitsum.com/). It keeps a PC responsive under heavy CPU load with the ProBalance algorithm, and lets you enforce persistent rules such as CPU affinities, priority classes, CPU sets, power profiles, instance limits, and process watchdogs.
