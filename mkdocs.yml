@@ -5,7 +5,7 @@ site_description: Offline Markdown mirror of the official Process Lasso document
 site_author: Bitsum LLC
 
 exclude_docs: |
-  /zh/
+  /zh-CN/
 
 # Repository
 repo_name: Vstory/ProcessLasso-Docs
