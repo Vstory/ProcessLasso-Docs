@@ -52,10 +52,12 @@ plugins:
       lang:
         - en
         - zh
+      # reconfigure_material is off so that locale zh-CN can map Material's own
+      # language code (zh) per build; Material has no zh-CN translation.
   - i18n:
       docs_structure: folder
       fallback_to_default: true
-      reconfigure_material: true
+      reconfigure_material: false
       reconfigure_search: true
       languages:
         - locale: en
@@ -63,12 +65,87 @@ plugins:
           build: true
           default: true
           site_name: Process Lasso Documentation
-        # Translation pending: put pages under docs/zh/ and switch build to true.
-        - locale: zh
+          theme:
+            language: en
+        - locale: zh-CN
           name: 简体中文
-          build: false
+          build: true
           default: false
           site_name: Process Lasso 文档
+          theme:
+            language: zh
+          nav_translations:
+            Introduction: 介绍
+            Setup Guide: 安装指南
+            How Process Lasso Works: 工作原理
+            The Interface: 界面
+            Main Window: 主窗口
+            The Graph: 图表
+            All Processes Tab: 所有进程选项卡
+            Active Processes Tab: 活跃进程选项卡
+            Process Info Columns: 进程信息列
+            The Rules Column: 规则列
+            Log Viewer & Logging: 日志查看器与日志记录
+            Keyboard Shortcuts: 键盘快捷键
+            Process Rules: 进程规则
+            Automation: 自动化
+            Priorities: 优先级
+            CPU Affinities: CPU 相关性
+            CPU Sets: CPU 集
+            System Reserved CPU Sets: 系统保留 CPU 集
+            Efficiency Mode: 效率模式
+            Instance Count Limits: 实例数量限制
+            Keep Running: 保持运行
+            Auto-Terminate: 自动终止
+            Process Watchdog: 进程看门狗
+            Foreground Boosting: 前台提升
+            Startup Boost: 启动提升
+            System Timer Resolution: 系统定时器分辨率
+            Anti-Sleep Processes: 阻止睡眠的进程
+            Algorithms: 算法
+            Overview: 概述
+            ProBalance: ProBalance
+            Performance Mode: 性能模式
+            CPU Limiter: CPU 限制器
+            Instance Balancer: 实例均衡器
+            Processor Group Extender: 处理器组扩展器
+            Hard-Throttling: 硬性节流
+            SmartTrim: 智能内存整理
+            Power: 电源
+            Application Power Profiles: 应用电源计划
+            IdleSaver: 空闲节能
+            Load-Based Profile Switching: 基于负载的配置方案切换
+            Config Profile Switcher: 配置方案切换器
+            Tools: 工具
+            LatencyTest: LatencyTest
+            Reference: 参考
+            Command Line Arguments: 命令行参数
+            INI Configuration File: INI 配置文件
+            Rules Import and Export (JSON): 规则导入与导出（JSON）
+            Process Matching: 进程匹配
+            Config and Log Paths: 配置与日志路径
+            Global Options: 全局选项
+            Deployment: 部署
+            Overview: 概述
+            Installation: 安装
+            Licensing: 许可
+            Auto-Start Behavior: 自动启动行为
+            Config Push / Pull: 配置推送 / 拉取
+            Enterprise Deployment: 企业部署
+            Help: 帮助
+            Anti-Cheat Systems: 反作弊系统
+            More Help: 更多帮助
+
+
+# reconfigure_material is off (see plugins), so the language selector is declared here.
+extra:
+  alternate:
+    - name: English
+      link: /ProcessLasso-Docs/
+      lang: en
+    - name: 简体中文
+      link: /ProcessLasso-Docs/zh-CN/
+      lang: zh-CN
 
 markdown_extensions:
   - admonition

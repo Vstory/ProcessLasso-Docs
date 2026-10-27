@@ -31,6 +31,12 @@ jobs:
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       # actions/upload-pages-artifact bundles actions/upload-artifact by tag, which the
       # repository policy rejects, so the archive is produced here instead.
+      # mkdocs-static-i18n writes one combined index under site/search, but the
+      # translated site requests its own copy.
+      - name: Share the search index with the translated site
+        run: |
+          mkdir -p site/zh-CN/search
+          cp site/search/search_index.json site/zh-CN/search/search_index.json
       - name: Package site
         working-directory: site
         run: tar --dereference --hard-dereference -cf "$RUNNER_TEMP/artifact.tar" .
