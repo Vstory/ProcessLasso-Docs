@@ -4,9 +4,6 @@ site_url: https://vstory.github.io/ProcessLasso-Docs/
 site_description: Offline Markdown mirror of the official Process Lasso documentation from bitsum.com.
 site_author: Bitsum LLC
 
-exclude_docs: |
-  /zh-CN/
-
 # Repository
 repo_name: Vstory/ProcessLasso-Docs
 repo_url: https://github.com/Vstory/ProcessLasso-Docs
