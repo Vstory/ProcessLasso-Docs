@@ -73,6 +73,21 @@ Process Lasso is Windows process automation and optimization software by [Bitsum
 
 [All pages (A-Z)](docs/all-pages.md)
 
+## Simplified Chinese Translation
+
+Every page is also available in Simplified Chinese at <https://vstory.github.io/ProcessLasso-Docs/zh-CN/>; the site header has a language switcher. The sources live in `docs/zh-CN/` and mirror the English page paths one to one.
+
+Translation consistency is checked by a script rather than by eye:
+
+```bash
+python3 scripts/check_i18n.py            # readable list on stdout, summary on stderr
+python3 scripts/check_i18n.py --json     # machine-readable, for CI
+python3 scripts/check_i18n.py --strict   # warnings fail too
+python3 scripts/check_i18n.py --selftest # verify the checks themselves
+```
+
+It covers page coverage, the `<!-- source: -->` header, heading-count parity, the heading anchors that keep cross-page links alive, relative links and `#fragments` (including the `media/` depth), banned wording, half-width punctuation next to Chinese text, unclosed code fences and table column counts. Upstream defects and the page that is deliberately structured differently are listed with reasons in `scripts/i18n-allow.txt`. CI runs it on every push.
+
 ## Get Process Lasso
 
 [Download the latest release](https://bitsum.com/download-process-lasso/) | [How ProBalance works](https://bitsum.com/how-probalance-works/) | [Performance Mode](https://bitsum.com/bhp/) | [SmartTrim](https://bitsum.com/smarttrim/)

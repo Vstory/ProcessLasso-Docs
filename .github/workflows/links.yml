@@ -20,3 +20,5 @@ jobs:
             'docs/**/*.md'
             'README.md'
           fail: true
+      - name: Check translation
+        run: python3 scripts/check_i18n.py --strict
