@@ -9,8 +9,8 @@ jobs:
   codespell:
     runs-on: ubuntu-latest
     steps:
-      - uses: 11d5960a326750d5838078e36cf38b85af677262 # v4
-      - uses: 8f01853be192eb0f849a5c7d721450e7a467c579 # v2
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: codespell-project/actions-codespell@8f01853be192eb0f849a5c7d721450e7a467c579 # v2
         with:
           skip: 'docs/media/*,site/*'
           ignore_words_list: 'prolasso,bitsum,lasso,nd,te,upto,fo,wee'
