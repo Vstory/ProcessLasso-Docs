@@ -1,0 +1,149 @@
+# Project information
+site_name: Process Lasso Documentation
+site_url: https://vstory.github.io/ProcessLasso-Docs/
+site_description: Offline Markdown mirror of the official Process Lasso documentation from bitsum.com.
+site_author: Bitsum LLC
+
+exclude_docs: |
+  /zh/
+
+# Repository
+repo_name: Vstory/ProcessLasso-Docs
+repo_url: https://github.com/Vstory/ProcessLasso-Docs
+edit_uri: https://github.com/Vstory/ProcessLasso-Docs/edit/main/docs/
+
+copyright: 'Documentation content &copy; <a href="https://bitsum.com/">Bitsum LLC</a>. Markdown mirror for offline reading; no rights claimed.'
+
+# use_directory_urls is disabled so that relative links between pages and to media/
+# resolve correctly both on the built site and when browsing the Markdown on GitHub.
+use_directory_urls: false
+
+theme:
+  name: material
+  language: en
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - content.tooltips
+    - navigation.footer
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: '(prefers-color-scheme)'
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+plugins:
+  - search:
+      lang:
+        - en
+        - zh
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          name: English
+          build: true
+          default: true
+          site_name: Process Lasso Documentation
+        # Translation pending: put pages under docs/zh/ and switch build to true.
+        - locale: zh
+          name: 简体中文
+          build: false
+          default: false
+          site_name: Process Lasso 文档
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+
+nav:
+  - Introduction: index.md
+  - Setup Guide: getting-started/setup-guide.md
+  - How Process Lasso Works: getting-started/how-it-works.md
+  - The Interface:
+      - Main Window: interface/main-window.md
+      - The Graph: interface/graph.md
+      - All Processes Tab: interface/all-processes.md
+      - Active Processes Tab: interface/active-processes.md
+      - Process Info Columns: interface/columns.md
+      - The Rules Column: interface/rules-column.md
+      - Log Viewer & Logging: interface/logging.md
+      - Keyboard Shortcuts: interface/keyboard-shortcuts.md
+  - Process Rules:
+      - Automation: rules/index.md
+      - Priorities: rules/priorities.md
+      - CPU Affinities: rules/cpu-affinities.md
+      - CPU Sets: rules/cpu-sets.md
+      - System Reserved CPU Sets: rules/reserved-cpu-sets.md
+      - Efficiency Mode: rules/efficiency-mode.md
+      - Instance Count Limits: rules/instance-limits.md
+      - Keep Running: rules/keep-running.md
+      - Auto-Terminate: rules/auto-terminate.md
+      - Process Watchdog: rules/watchdog.md
+      - Foreground Boosting: rules/foreground-boosting.md
+      - Startup Boost: rules/startup-boost.md
+      - System Timer Resolution: rules/timer-resolution.md
+      - Anti-Sleep Processes: rules/anti-sleep.md
+  - Algorithms:
+      - Overview: algorithms/index.md
+      - ProBalance: algorithms/probalance.md
+      - Performance Mode: algorithms/performance-mode.md
+      - CPU Limiter: algorithms/cpu-limiter.md
+      - Instance Balancer: algorithms/instance-balancer.md
+      - Processor Group Extender: algorithms/group-extender.md
+      - Hard-Throttling: algorithms/hard-throttling.md
+      - SmartTrim: algorithms/smarttrim.md
+  - Power:
+      - Application Power Profiles: power/power-profiles.md
+      - IdleSaver: power/idlesaver.md
+      - Load-Based Profile Switching: power/load-based-switching.md
+      - Config Profile Switcher: power/config-profile-switcher.md
+  - Tools:
+      - LatencyTest: tools/latencytest.md
+  - Reference:
+      - Command Line Arguments: reference/command-lines.md
+      - INI Configuration File: reference/ini-config.md
+      - Rules Import and Export (JSON): reference/json-format.md
+      - Process Matching: reference/process-matching.md
+      - Config and Log Paths: reference/config-paths.md
+      - Global Options: reference/global-options.md
+  - Deployment:
+      - Overview: deployment/index.md
+      - Installation: deployment/installation.md
+      - Licensing: deployment/licensing.md
+      - Auto-Start Behavior: deployment/auto-start.md
+      - Config Push / Pull: deployment/config-push-pull.md
+      - Enterprise Deployment: deployment/enterprise.md
+  - Help:
+      - Anti-Cheat Systems: help/anti-cheat.md
+      - More Help: help/more-help.md
+  - All Pages: all-pages.md

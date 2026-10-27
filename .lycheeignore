@@ -1,0 +1,3 @@
+# URLs skipped by the link checker. Upstream big-image links were already dead
+# at fetch time (302 to a 404), so they are not part of this mirror.
+https://bitsum.com/docs/pl/images/*

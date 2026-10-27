@@ -1,0 +1,17 @@
+# MkDocs build output
+site/
+.cache/
+
+# Link checker cache
+.lycheecache
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp

@@ -1,0 +1,16 @@
+name: Codespell
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  codespell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: codespell-project/actions-codespell@v2
+        with:
+          skip: 'docs/media/*,site/*'
+          ignore_words_list: 'prolasso,bitsum,lasso,nd,te,upto,fo,wee'
