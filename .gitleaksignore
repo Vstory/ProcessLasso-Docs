@@ -1,3 +1,4 @@
-# Example license key printed in the upstream Process Lasso command-line docs
-# (bitsum.com), not a real secret.
-docs/reference/command-lines.md:generic-api-key:19
+# The installer's /key example is a placeholder license key copied verbatim from
+# the upstream documentation; it is not a live credential.
+20d21ec431c1ff3e7295996009a781b8a7fe62a3:docs/zh-CN/reference/command-lines.md:generic-api-key:27
+docs/zh-CN/reference/command-lines.md:generic-api-key:27
