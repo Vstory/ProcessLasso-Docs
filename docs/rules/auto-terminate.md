@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/rules/auto-terminate/ -->
 
+<a id="auto_terminate"></a>
+
 # Auto-Terminate List
 
 - *Menu path: ‘Options / Control / Disallowed Processes …’*

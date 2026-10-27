@@ -28,6 +28,8 @@ To see the effect yourself, run the CPUEater demo from the [ProBalance overview 
 >
 > Do not raise your important processes to High or Real-Time priority to keep them responsive. ProBalance works from the opposite direction, by lowering the priority of the offenders, which is far safer.
 
+<a id="ooc_options"></a>
+
 ## ProBalance Options
 
 *Menu path: Options / CPU / ProBalance*

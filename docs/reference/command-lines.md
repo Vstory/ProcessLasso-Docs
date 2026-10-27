@@ -1,6 +1,10 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/reference/command-lines/ -->
 
+<a id="command_line"></a>
+
 # Command Line Arguments
+
+<a id="htoc-installer-command-line"></a>
 
 ## Installer
 

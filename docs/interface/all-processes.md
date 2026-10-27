@@ -20,6 +20,8 @@ Left-clicking on the ‘Process name’ header will rotate between tree and clas
 
 The context menu when multiple processes are selected is different than when a single process is selected, since not all operations can be performed on multiple processes.
 
+<a id="multi_context"></a>
+
 ## Multi-Select Process Context Menu
 
 [![Process Lasso Terminate Multiple Processes at once](../media/multi-select-menu.png)](https://bitsum.com/automation/attachment/lasso_multi_select/)

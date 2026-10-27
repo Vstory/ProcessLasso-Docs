@@ -2,6 +2,8 @@
 
 # Global Options
 
+<a id="forced_mode"></a>
+
 ## Forced Mode
 
 - *Menu path: ‘Options / Forced Mode (continuously reapply settings)’*

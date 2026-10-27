@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/reference/process-matching/ -->
 
+<a id="processmatch"></a>
+
 # Process Matching
 
 The ‘process match’ can be a simple process name, wildcards, or even a [Regular Expression checked against multiple process attributes](https://rulebuilder.bitsum.com), such as the user and command line.
@@ -20,6 +22,8 @@ chrome*
 chrome.exe:bob
  Match any process named chrome.exe running under user 'bob'
 ```
+
+<a id="htoc-childof"></a>
 
 ## Child Processes (childof:)
 
@@ -45,6 +49,8 @@ The parent process itself does not match a `childof:` rule; add a separate rule 
 It is **not** supported by Disallowed Processes, instance count limits, GPU adapter preferences, or rules enforced by registry (Enforce by Registry requires a plain process name).
 
 `childof:` can't be combined with a user name. To restrict a child process match by user or other attributes, use a [Regular Expression](process-matching.md#htoc-regular-expressions). Regular Expressions only see the direct parent (the ParentName field), while `childof:` checks every ancestor.
+
+<a id="htoc-regular-expressions"></a>
 
 ## Regular Expressions
 

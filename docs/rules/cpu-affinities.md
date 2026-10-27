@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/rules/cpu-affinities/ -->
 
+<a id="default_affinities"></a>
+
 # CPU Affinities
 
 A CPU affinity controls which CPU cores a process is allowed to use; its threads will only ever be scheduled onto that set of cores.
@@ -22,6 +24,8 @@ Right-click a process and choose *CPU Affinity*, either for the current instance
 ### The Delay Field
 
 The optional *Delay* field applies the affinity only after the specified number of seconds from process startup. This helps with games and applications that are sensitive to affinity changes during their startup phase, and can also be used deliberately to give a process the full CPU while loading before restricting it.
+
+<a id="smt"></a>
 
 ## Disable SMT or Hyper-Threading
 

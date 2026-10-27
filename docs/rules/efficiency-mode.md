@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/rules/efficiency-mode/ -->
 
+<a id="efficiency_mode"></a>
+
 # Efficiency Mode
 
 Efficiency Mode is a Windows signal that a process is not time-critical, so the OS may deprioritize it, run it at lower clock speeds, or schedule it onto efficiency cores (E-cores) if available. Windows provides no way to make the setting stick; Process Lasso lets you persist Efficiency Mode ON or OFF for specific processes.

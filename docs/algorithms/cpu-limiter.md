@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/algorithms/cpu-limiter/ -->
 
+<a id="cpulimiter"></a>
+
 # CPU Limiter
 
 *Menu path: Options / CPU / CPU Limiter*

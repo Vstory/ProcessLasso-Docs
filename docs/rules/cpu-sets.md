@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/rules/cpu-sets/ -->
 
+<a id="cpusets"></a>
+
 # CPU Sets
 
 - *Menu path: ‘Options / CPU / CPU Sets…’*

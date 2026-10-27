@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/rules/instance-limits/ -->
 
+<a id="instance_count_limits"></a>
+
 # Instance Count Limits
 
 - *Menu path: ‘Options / Control / Instance Count Limits …’*

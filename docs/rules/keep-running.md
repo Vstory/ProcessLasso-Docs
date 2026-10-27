@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/rules/keep-running/ -->
 
+<a id="keep_running"></a>
+
 # Keep Running (Auto-Restart)
 
 - *Menu path: ‘Options / Control / Keep Running (auto-restart) …’*

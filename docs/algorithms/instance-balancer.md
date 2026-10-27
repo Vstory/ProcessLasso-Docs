@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/algorithms/instance-balancer/ -->
 
+<a id="instancebalancer"></a>
+
 # Instance Balancer
 
 - *Menu path: ‘Options / CPU / Instance Balancer …’*

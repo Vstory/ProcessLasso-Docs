@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/rules/watchdog/ -->
 
+<a id="watchdog"></a>
+
 # Process Watchdog
 
 - *Menu path: ‘Options / Control / Watchdog (advanced rules) …’*

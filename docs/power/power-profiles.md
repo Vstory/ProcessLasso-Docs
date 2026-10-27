@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/power/power-profiles/ -->
 
+<a id="application_power_profiles"></a>
+
 # Application Power Profiles
 
 - *Menu path: ‘Options / Power / Application Power Profiles …’*

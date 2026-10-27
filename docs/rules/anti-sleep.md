@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/rules/anti-sleep/ -->
 
+<a id="anti_sleep"></a>
+
 # Anti-Sleep Processes
 
 - *Menu path: ‘Options / Power / Keep Awake …’*

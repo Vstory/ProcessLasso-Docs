@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/algorithms/performance-mode/ -->
 
+<a id="gaming_mode"></a>
+
 # Performance Mode
 
 *For an overview, including when to use it, how it compares with ProBalance, and Windows 11 Efficiency Mode, see [Performance Mode (Bitsum Highest Performance power plan) in Process Lasso](https://bitsum.com/bhp/).*

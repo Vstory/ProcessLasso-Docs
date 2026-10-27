@@ -2,6 +2,8 @@
 
 # Priorities
 
+<a id="default_priorities"></a>
+
 ## CPU Priority Classes
 
 - *Menu path: ‘Options / CPU / CPU Priorities …’*
@@ -73,6 +75,8 @@ Memory priorities provides a hint to the OS about the relative importance of mem
 - Low
 - Very Low
 
+<a id="enforce-by-registry"></a>
+
 ## Enforce By Windows Registry
 
 Enforce by registry uses the [Windows Image File Execution Options](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/image-file-execution-options) feature to save the priority to the registry so that every time that process is launched it will start with the chosen priority. Since the priority is applied by Windows at the time of process creation, this method works on processes that are otherwise inaccessible, such as those protected by anti-cheat systems. The disadvantage is that these settings persist in the registry, so they may go unnoticed and forgotten about if not managed with a tool like Process Lasso.
@@ -102,6 +106,8 @@ Priorities saved to the registry can be reviewed and removed in this dialog.
 ![Priorities saved to the registry for review and cleanup](../media/registry-priorities.png)
 
 Priorities saved to the registry for review and cleanup
+
+<a id="boost"></a>
 
 ## Thread Boost
 

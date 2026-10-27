@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/algorithms/group-extender/ -->
 
+<a id="groupextend"></a>
+
 # Processor Group Extender
 
 Process Lasso 9.7 adds the Processor Group Extender. This novel algorithm allows processor group unaware applications to make use of the full CPU. It accomplishes this by monitoring threads of target processes and dynamically assigning threads to supplemental processor groups as required.

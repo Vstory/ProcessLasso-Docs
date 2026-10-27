@@ -124,11 +124,15 @@ WatchdogRules2=leaky.exe;0;1;2048.00;30000;0;0;1;-;-;-;-
 
 Boolean keys accept `true` or `false` (or the other [boolean spellings](ini-config.md#editing-rules)). Times are in milliseconds unless the key says otherwise.
 
+<a id="group-administration"></a>
+
 ### Administration
 
 | Key | Values | Default | Description |
 | --- | --- | --- | --- |
 | Version | number |  | The version of Process Lasso that last wrote the file. Informational only; it is never read. |
+
+<a id="group-outofcontrolprocessrestraint"></a>
 
 ### OutOfControlProcessRestraint
 
@@ -167,6 +171,8 @@ These keys configure [ProBalance](../algorithms/probalance.md).
 | PlayOnRestore | file path | Windows sound | The `.wav` file played on restore. |
 | ChangeTrayIconOnRestraint | boolean | true | Change the tray icon while a process is restrained. |
 
+<a id="group-gui"></a>
+
 ### GUI
 
 | Key | Values | Default | Description |
@@ -192,15 +198,21 @@ These keys configure [ProBalance](../algorithms/probalance.md).
 
 The *show process icons* setting is stored in the registry, not the INI file.
 
+<a id="group-gpuadapters"></a>
+
 ### GPUAdapters
 
 This group holds one `adapter=true|false` entry per GPU adapter, recording whether the graph shows that adapter. The GUI writes these entries.
+
+<a id="group-advanced"></a>
 
 ### Advanced
 
 | Key | Values | Default | Description |
 | --- | --- | --- | --- |
 | AutomaticUpdate | boolean | false | Install updates automatically. |
+
+<a id="group-performance"></a>
 
 ### Performance
 
@@ -220,6 +232,8 @@ This group holds one `adapter=true|false` entry per GPU adapter, recording wheth
 | SetTimerResolutionAtStartup | 100-ns units | 0 | System timer resolution to set at startup; for example, `5000` is 0.5 ms. `0` means don't set it. See [System Timer Resolution](../rules/timer-resolution.md). |
 | DefaultsLevel | number |  | Internal: the ProBalance defaults version. Process Lasso uses it to offer a reset after the defaults change. Don't edit. |
 
+<a id="group-sampling"></a>
+
 ### Sampling
 
 When sampling is enabled, Process Lasso periodically writes a CSV snapshot of the matching processes.
@@ -231,6 +245,8 @@ When sampling is enabled, Process Lasso periodically writes a CSV snapshot of th
 | SamplingOutputPath | file path | empty | Where to write the CSV. It may contain `%yyyy%`, `%MM%`, `%dd%`, `%hh%`, `%mm%` and `%ss%`, which are filled in from the current UTC time. |
 | SamplingIncludePattern | `;`-separated wildcards | `*` | Process names to include. |
 | SamplingExcludePattern | `;`-separated wildcards | empty | Process names to exclude. |
+
+<a id="group-foregroundboosting"></a>
 
 ### ForegroundBoosting
 
@@ -245,12 +261,16 @@ See [Foreground Boosting](../rules/foreground-boosting.md).
 | BoostOnlyNormalGPU | boolean | true | Only GPU-boost processes running at normal GPU priority. |
 | ForegroundBoostExclusions | match list | empty | Processes never boosted. |
 
+<a id="group-systemtrayicon"></a>
+
 ### SystemTrayIcon
 
 | Key | Values | Default | Description |
 | --- | --- | --- | --- |
 | UseStaticIcon | boolean | false | Use a static tray icon instead of the animated graph icon. |
 | ShowResponsivnessInTrayInsteadOfProcessorUsage | boolean | false | Show responsiveness in the tray icon instead of CPU usage. |
+
+<a id="group-logging"></a>
 
 ### Logging
 
@@ -277,6 +297,8 @@ See [Log Viewer & Logging](../interface/logging.md).
 | LogGroupExtender | true | Processor Group Extender actions |
 | LogCPUSets | true | CPU Set changes |
 
+<a id="group-memorymanagement"></a>
+
 ### MemoryManagement
 
 See [SmartTrim](../algorithms/smarttrim.md).
@@ -295,6 +317,8 @@ See [SmartTrim](../algorithms/smarttrim.md).
 | SmartTrimExclusions | match list | empty | Processes never trimmed. |
 | SmartTrimLogNoAction | boolean | true | Also log when SmartTrim checks but takes no action. |
 
+<a id="group-systrayballoons"></a>
+
 ### SysTrayBalloons
 
 | Key | Values | Default | Description |
@@ -302,6 +326,8 @@ See [SmartTrim](../algorithms/smarttrim.md).
 | EnableSystemTrayNotification | boolean | false | Show tray notifications. |
 | BalloonTipDuration | ms | 10000 | How long notifications are shown. Windows may enforce its own limits. |
 | ShowBalloonsForOocPriorityRestoration | boolean | false | Also notify when ProBalance restores a process. |
+
+<a id="group-processallowances"></a>
 
 ### ProcessAllowances
 
@@ -317,6 +343,8 @@ See [SmartTrim](../algorithms/smarttrim.md).
 | CPULimitRules | `match;cpu%;over_ms;cores;for_ms,...` | [CPU Limiter](../algorithms/cpu-limiter.md) rules. When the process uses at least *cpu%* for *over\_ms*, remove *cores* cores from its affinity for *for\_ms*. |
 | StartupBoostRules | `match;priority;seconds;efficiency,...` | [Startup Boost](../rules/startup-boost.md) rules. *priority*: a priority class name. *seconds*: how long the boost lasts. *efficiency*: `1` to keep the process out of Efficiency Mode during the boost, otherwise `0`. |
 | EfficiencyMode | `match,mode,match,mode,...` | [Efficiency Mode](../rules/efficiency-mode.md) rules. *mode*: `1` on, `0` off. |
+
+<a id="group-processdefaults"></a>
 
 ### ProcessDefaults
 
@@ -339,6 +367,8 @@ See [SmartTrim](../algorithms/smarttrim.md).
 
 Rules set to *Enforce by Windows Registry* are stored in the registry, not the INI file. See [Priorities](../rules/priorities.md).
 
+<a id="group-advancedrules"></a>
+
 ### AdvancedRules
 
 | Key | Format | Description |
@@ -347,6 +377,8 @@ Rules set to *Enforce by Windows Registry* are stored in the registry, not the I
 | DivideCPUPercentThresholdsBySystemCPUCount | boolean (default false) | Scale watchdog CPU thresholds by the number of CPUs. |
 | ProcessorGroupExtended | `match,match,...` | Processes handled by the [Processor Group Extender](../algorithms/group-extender.md). |
 | ProhibitInternetExplorerExceptWhenAny | `match,match,...` | Internet Explorer (`iexplore.exe`) can only run while one of these processes is running. |
+
+<a id="group-gamingmode"></a>
 
 ### GamingMode
 
@@ -361,6 +393,8 @@ See [Performance Mode](../algorithms/performance-mode.md).
 | AutomaticGamingModeProcessPaths | `match,match,...` | empty | Processes that start Performance Mode automatically. |
 | AutomaticGamingModeUserExclusions | `match,match,...` | empty | Processes that never start Performance Mode automatically. |
 
+<a id="group-powermanagement"></a>
+
 ### PowerManagement
 
 | Key | Values | Description |
@@ -368,6 +402,8 @@ See [Performance Mode](../algorithms/performance-mode.md).
 | StartWithPowerPlan | power plan name | The power plan to activate when Process Lasso starts. Empty means don't change it. |
 | Display | `match,match,...` | Processes that keep the display awake while they run. See [Anti-Sleep Processes](../rules/anti-sleep.md). |
 | PC | `match,match,...` | Processes that keep the PC awake while they run. |
+
+<a id="group-powersaver"></a>
 
 ### PowerSaver
 
@@ -385,6 +421,8 @@ See [IdleSaver](../power/idlesaver.md).
 | EnergySaverCPUThreshold | % (decimal allowed) | 5.00 | The CPU threshold for idle detection. |
 | PowerSaver\_Exclusions | `match,match,...` | empty | Processes that prevent IdleSaver from engaging while they run. |
 | EnergySaverEvents | boolean | true | Log IdleSaver events. |
+
+<a id="group-loadbasedpowerswitcher"></a>
 
 ### LoadBasedPowerSwitcher
 

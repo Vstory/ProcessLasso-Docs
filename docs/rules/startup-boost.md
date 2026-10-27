@@ -1,5 +1,7 @@
 <!-- source: https://bitsum.com/apps/process-lasso/docs/rules/startup-boost/ -->
 
+<a id="startup_boost"></a>
+
 # Startup Boost
 
 - *Menu path: ‘Options / CPU / Startup Boosting…’*
